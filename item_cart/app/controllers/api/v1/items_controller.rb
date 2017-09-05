@@ -23,3 +23,7 @@ class Api::V1::ItemsController < Api::V1::BaseController
     params.require(:item).permit(:id, :name, :description)
   end
 end
+
+# The respond_with method is part of the responders gem and will return a JSON object with the results of each action in the controller.
+
+# The routing for the controller has to consider the fact that it’s within two namespaces; API and V1. We’ll do this using the namespace method
